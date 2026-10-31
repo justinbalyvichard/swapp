@@ -1,0 +1,20 @@
+/* Swapp — tokens Nuit et corail */
+:root {
+  --swapp-nuit: #121A26;          /* fond de l'appli */
+  --swapp-surface: #1C2635;       /* cartes, listes groupées */
+  --swapp-segment: #263244;
+  --swapp-segment-on: #3A4A62;
+  --swapp-ligne: #2E3A4C;
+  --swapp-texte: #EAF0F7;
+  --swapp-muted: #9AA8BA;
+  --swapp-nav-muted: #7F8C9E;
+  --swapp-corail: #F2A38A;        /* accent sur fond sombre */
+  --swapp-corail-profond: #D4664A;/* accent sur fond clair */
+  --swapp-sur-corail: #2A1510;    /* texte posé sur le corail */
+  --swapp-secondaire: #2B3A52;
+  --swapp-toggle-on: #E08A6E;
+  --swapp-bande-1: #2B4A6E;
+  --swapp-bande-2: #4D6F95;
+  --swapp-bande-3: #E08A6E;
+  --swapp-bande-4: #F2C2A8;
+}

@@ -1,0 +1,175 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="web/favicon.svg" type="image/svg+xml"></head><body style="margin:0">
+<title>Charte Swapp</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout : colonne unique, sections séparées par les bandes 70s ; planches claires ou sombres selon la version présentée */
+:root{
+  --nuit:#121A26; --surface:#1C2635; --ligne:#2E3A4C; --texte:#EAF0F7; --muted:#9AA8BA;
+  --corail:#F2A38A; --corail-profond:#D4664A; --papier:#F5F6F8;
+  --b1:#2B4A6E; --b2:#4D6F95; --b3:#E08A6E; --b4:#F2C2A8;
+  --sans:-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+body{background:var(--nuit);color:var(--texte);font-family:var(--sans);font-size:16px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.bandes{display:grid;grid-template-rows:repeat(4,6px)}
+.bandes i:nth-child(1){background:var(--b1)}.bandes i:nth-child(2){background:var(--b2)}.bandes i:nth-child(3){background:var(--b3)}.bandes i:nth-child(4){background:var(--b4)}
+header{padding-block:56px 40px;display:grid;gap:20px}
+header svg.lock{width:min(420px,100%);height:auto}
+h1{font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.lead{font-size:20px;max-width:58ch;margin:0;text-wrap:pretty}
+section{padding-block:48px;border-top:1px solid var(--ligne);display:grid;gap:22px}
+h2{font-size:28px;line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0;max-width:65ch;color:var(--muted)}
+p strong{color:var(--texte);font-weight:600}
+.idee{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+.planche{border-radius:14px;display:flex;align-items:center;justify-content:center;padding:36px 24px;min-height:200px}
+.clair{background:var(--papier)}.sombre{background:var(--surface)}
+.planche svg{max-width:100%;height:auto}
+.legende{font-size:13px;color:var(--muted);margin-top:8px}
+.grille{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.couleurs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pastille{border-radius:12px;overflow:hidden;background:var(--surface);display:grid}
+.pastille .c{height:96px}
+.pastille .t{padding:12px 14px;display:grid;gap:2px;font-size:14px}
+.pastille .t b{font-weight:600}
+.pastille button{justify-self:start;margin-top:6px;font:inherit;font-family:var(--mono);font-size:13px;color:var(--corail);background:none;border:1px solid var(--ligne);border-radius:6px;padding:3px 8px;cursor:pointer}
+.pastille button:focus-visible,a:focus-visible{outline:2px solid var(--corail);outline-offset:2px}
+.tailles{display:flex;flex-wrap:wrap;align-items:flex-end;gap:28px}
+.tailles figure{margin:0;display:grid;gap:8px;justify-items:center;font-size:13px;color:#4A5566;font-variant-numeric:tabular-nums}
+.regles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 32px;padding:0;margin:0;list-style:none}
+.regles li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;color:var(--muted)}
+.regles li b{color:var(--texte);font-weight:600}
+.non{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.non figure{margin:0;display:grid;gap:8px;font-size:13px;color:var(--muted)}
+.non .planche{min-height:120px;padding:18px;position:relative}
+.non .planche::after{content:"";position:absolute;inset:10px auto auto 10px;width:18px;height:18px;border-radius:50%;background:var(--corail-profond);-webkit-mask:linear-gradient(45deg,transparent 44%,#000 44%,#000 56%,transparent 56%);mask:linear-gradient(45deg,transparent 44%,#000 44%,#000 56%,transparent 56%)}
+code{font-family:var(--mono);font-size:14px;color:var(--texte)}
+@media (max-width:720px){.idee,.grille,.regles{grid-template-columns:minmax(0,1fr)}.couleurs,.non{grid-template-columns:repeat(2,minmax(0,1fr))}h2{font-size:24px}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="haut" d="M187 88 A59 59 0 1 0 117.75 146.1 L123.66 112.62 A25 25 0 1 1 153 88 Z"/>
+    <path id="bas" d="M69 168 A59 59 0 1 0 138.25 109.9 L132.34 143.38 A25 25 0 1 1 103 168 Z"/>
+    <g id="mot">
+      <path d="M85 101 A29 29 0 1 0 56 130 A9 9 0 1 1 47 139 L27 139 A29 29 0 1 0 56 110 A9 9 0 1 1 65 101 Z" stroke="none"/>
+      <g fill="none" stroke-width="20" stroke-linejoin="round"><path d="M113 74 L136.58 162 L153.73 98 L170.88 162 L194.46 74"/><circle cx="265" cy="120" r="38"/><path d="M303 72 L303 168"/><path d="M339 72 L339 216"/><circle cx="377" cy="120" r="38"/><path d="M449 72 L449 216"/><circle cx="487" cy="120" r="38"/></g>
+    </g>
+  </defs>
+</svg>
+
+<div class="bandes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="wrap">
+<header>
+  <h1>Charte de marque</h1>
+  <svg class="lock" viewBox="0 40 667 196" role="img" aria-label="Swapp">
+    <g transform="translate(-42.37 26.56) scale(0.73)"><use href="#haut" fill="#F2A38A"/><use href="#bas" fill="#EAF0F7"/></g>
+    <g transform="translate(122.14 0)" fill="#EAF0F7" stroke="#EAF0F7"><use href="#mot"/></g>
+  </svg>
+  <p class="lead">Le logo de Swapp, ses couleurs Nuit et corail, l'icône d'app et les règles pour bien l'utiliser.</p>
+</header>
+
+<section>
+  <h2>L'idée</h2>
+  <div class="idee">
+    <div class="planche sombre">
+      <svg viewBox="40 20 176 216" width="200" role="img" aria-label="Les deux moitiés du S, séparées">
+        <g transform="translate(14 -10)"><use href="#haut" fill="#F2A38A"/></g>
+        <g transform="translate(-14 10)"><use href="#bas" fill="#EAF0F7"/></g>
+      </svg>
+    </div>
+    <div style="display:grid;gap:14px">
+      <p><strong>Le S est fait de deux moitiés identiques.</strong> Faites tourner l'une d'un demi-tour et vous obtenez l'autre : c'est l'échange, dessiné dans l'initiale.</p>
+      <p>Une moitié corail, une moitié claire : les deux partenaires, sans aucun code explicite. Sur un écran d'accueil, Swapp reste une appli parmi d'autres.</p>
+      <p>Le <strong>s</strong> du logotype reprend la même construction en deux arcs, pour que le symbole et le nom parlent la même langue.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Les versions</h2>
+  <div class="grille">
+    <figure style="margin:0">
+      <div class="planche sombre"><svg viewBox="0 40 667 196" width="320" role="img" aria-label="Swapp, version sur fond sombre"><g transform="translate(-42.37 26.56) scale(0.73)"><use href="#haut" fill="#F2A38A"/><use href="#bas" fill="#EAF0F7"/></g><g transform="translate(122.14 0)" fill="#EAF0F7" stroke="#EAF0F7"><use href="#mot"/></g></svg></div>
+      <figcaption class="legende">Principale, sur fond sombre (appli, écran de lancement)</figcaption>
+    </figure>
+    <figure style="margin:0">
+      <div class="planche clair"><svg viewBox="0 40 667 196" width="320" role="img" aria-label="Swapp, version sur fond clair"><g transform="translate(-42.37 26.56) scale(0.73)"><use href="#haut" fill="#D4664A"/><use href="#bas" fill="#121A26"/></g><g transform="translate(122.14 0)" fill="#121A26" stroke="#121A26"><use href="#mot"/></g></svg></div>
+      <figcaption class="legende">Sur fond clair (site vitrine, documents) : corail profond</figcaption>
+    </figure>
+    <figure style="margin:0">
+      <div class="planche clair"><svg viewBox="10 20 542 404" width="190" role="img" aria-label="Swapp, version empilée"><g transform="translate(153 0)"><use href="#haut" fill="#D4664A"/><use href="#bas" fill="#121A26"/></g><g transform="translate(0 196)" fill="#121A26" stroke="#121A26"><use href="#mot"/></g></svg></div>
+      <figcaption class="legende">Empilée, pour les formats carrés</figcaption>
+    </figure>
+    <figure style="margin:0">
+      <div class="planche sombre" style="gap:36px;flex-wrap:wrap">
+        <svg viewBox="0 0 256 256" width="96" role="img" aria-label="Symbole blanc"><use href="#haut" fill="#EAF0F7"/><use href="#bas" fill="#EAF0F7"/></svg>
+        <svg viewBox="0 0 256 256" width="96" role="img" aria-label="Symbole corail"><use href="#haut" fill="#F2A38A"/><use href="#bas" fill="#F2A38A"/></svg>
+      </div>
+      <figcaption class="legende">Une couleur : la coupure suffit à garder l'idée</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <h2>Les couleurs</h2>
+  <p>Deux couleurs de marque, plus les bandes 70s en signature. Le corail change de teinte selon le fond pour rester lisible.</p>
+  <div class="couleurs">
+    <div class="pastille"><div class="c" style="background:#121A26;box-shadow:inset 0 0 0 1px #2E3A4C"></div><div class="t"><b>Nuit</b><span>Fond de l'appli, texte sur clair</span><button type="button" data-hex="#121A26">#121A26</button></div></div>
+    <div class="pastille"><div class="c" style="background:#F2A38A"></div><div class="t"><b>Corail</b><span>Sur fond sombre</span><button type="button" data-hex="#F2A38A">#F2A38A</button></div></div>
+    <div class="pastille"><div class="c" style="background:#D4664A"></div><div class="t"><b>Corail profond</b><span>Sur fond clair</span><button type="button" data-hex="#D4664A">#D4664A</button></div></div>
+    <div class="pastille"><div class="c" style="background:#EAF0F7"></div><div class="t"><b>Clair</b><span>Texte et moitié claire</span><button type="button" data-hex="#EAF0F7">#EAF0F7</button></div></div>
+  </div>
+  <div class="pastille" style="grid-template-columns:minmax(0,1fr)">
+    <div class="bandes" aria-hidden="true" style="grid-template-rows:repeat(4,14px)"><i></i><i></i><i></i><i></i></div>
+    <div class="t"><b>Bandes 70s</b><span>Haut des écrans, bas de l'icône et de l'écran de lancement. Toujours dans cet ordre, jamais sous le logo.</span><code>#2B4A6E · #4D6F95 · #E08A6E · #F2C2A8</code></div>
+  </div>
+</section>
+
+<section>
+  <h2>L'icône d'app</h2>
+  <p>Le symbole sur fond nuit, avec les bandes en pied d'icône. Elles restent visibles jusqu'à la taille Réglages.</p>
+  <div class="tailles planche clair" style="justify-content:flex-start;color:#4A5566">
+    <figure><svg viewBox="0 0 1024 1024" width="180" style="border-radius:40px" role="img" aria-label="Icône Swapp"><rect width="1024" height="1024" fill="#121A26"/><rect y="820" width="1024" height="34" fill="#2B4A6E"/><rect y="854" width="1024" height="34" fill="#4D6F95"/><rect y="888" width="1024" height="34" fill="#E08A6E"/><rect y="922" width="1024" height="34" fill="#F2C2A8"/><g transform="translate(512 410) scale(2.55) translate(-128 -128)"><use href="#haut" fill="#F2A38A"/><use href="#bas" fill="#EAF0F7"/></g></svg>180 px</figure>
+    <figure><svg viewBox="0 0 1024 1024" width="60" style="border-radius:13px" aria-hidden="true"><rect width="1024" height="1024" fill="#121A26"/><rect y="820" width="1024" height="34" fill="#2B4A6E"/><rect y="854" width="1024" height="34" fill="#4D6F95"/><rect y="888" width="1024" height="34" fill="#E08A6E"/><rect y="922" width="1024" height="34" fill="#F2C2A8"/><g transform="translate(512 410) scale(2.55) translate(-128 -128)"><use href="#haut" fill="#F2A38A"/><use href="#bas" fill="#EAF0F7"/></g></svg>60 px</figure>
+    <figure><svg viewBox="0 0 1024 1024" width="29" style="border-radius:7px" aria-hidden="true"><rect width="1024" height="1024" fill="#121A26"/><rect y="820" width="1024" height="34" fill="#2B4A6E"/><rect y="854" width="1024" height="34" fill="#4D6F95"/><rect y="888" width="1024" height="34" fill="#E08A6E"/><rect y="922" width="1024" height="34" fill="#F2C2A8"/><g transform="translate(512 410) scale(2.55) translate(-128 -128)"><use href="#haut" fill="#F2A38A"/><use href="#bas" fill="#EAF0F7"/></g></svg>29 px</figure>
+    <figure><svg viewBox="0 0 256 256" width="16" aria-hidden="true"><use href="#haut" fill="#F2A38A"/><use href="#bas" fill="#EAF0F7"/></svg>Favicon 16 px</figure>
+  </div>
+</section>
+
+<section>
+  <h2>Les règles</h2>
+  <ul class="regles">
+    <li><span aria-hidden="true">↔</span><span><b>Espace de protection :</b> laissez autour du logo au moins la largeur d'une moitié du S. Rien ne s'y pose.</span></li>
+    <li><span aria-hidden="true">↘</span><span><b>Taille minimale :</b> 16 px pour le symbole seul, 80 px de large pour la version horizontale.</span></li>
+    <li><span aria-hidden="true">◐</span><span><b>Le corail est toujours en haut.</b> La moitié du bas prend la couleur du texte : clair sur fond sombre, nuit sur fond clair.</span></li>
+    <li><span aria-hidden="true">✓</span><span><b>Fonds autorisés :</b> nuit, surface <code>#1C2635</code>, blanc, gris très clair. Sur une photo, posez d'abord un aplat nuit.</span></li>
+  </ul>
+  <div class="non">
+    <figure><div class="planche clair"><svg viewBox="0 0 256 256" width="72" aria-hidden="true"><use href="#haut" fill="#121A26"/><use href="#bas" fill="#D4664A"/></svg></div><figcaption>Ne pas inverser les deux moitiés</figcaption></figure>
+    <figure><div class="planche clair"><svg viewBox="0 0 256 256" width="72" aria-hidden="true"><path fill="#121A26" d="M187 88 A59 59 0 1 0 128 147 A25 25 0 1 1 128 197 A25 25 0 0 1 103 172 L69 168 A59 59 0 1 0 128 109 A25 25 0 1 1 153 88 Z"/></svg></div><figcaption>Ne pas refermer la coupure</figcaption></figure>
+    <figure><div class="planche clair"><svg viewBox="0 0 256 256" width="72" aria-hidden="true"><g transform="translate(128 128) scale(1.5 0.8) translate(-128 -128)"><use href="#haut" fill="#D4664A"/><use href="#bas" fill="#121A26"/></g></svg></div><figcaption>Ne pas déformer</figcaption></figure>
+    <figure><div class="planche clair"><svg viewBox="0 0 256 256" width="72" aria-hidden="true"><use href="#haut" fill="#7B5CF0"/><use href="#bas" fill="#E84393"/></svg></div><figcaption>Pas d'autres couleurs ni de dégradé</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Les fichiers</h2>
+  <p>Le kit livré avec cette charte contient les SVG maîtres (symbole, horizontal, empilé, versions sombres et une couleur), l'icône iOS en 1024 px et toutes ses tailles, le favicon et le jeu d'icônes web (manifeste PWA compris), ainsi qu'une planche de mises en situation.</p>
+</section>
+</div>
+<div class="bandes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+<script>
+document.querySelectorAll('button[data-hex]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var hex=b.dataset.hex, done=function(){b.textContent='Copié';setTimeout(function(){b.textContent=hex},1200)};
+    try{navigator.clipboard.writeText(hex).then(done,function(){selectText(b)})}catch(e){selectText(b)}
+  });
+});
+function selectText(el){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+</script>
+</body></html>
