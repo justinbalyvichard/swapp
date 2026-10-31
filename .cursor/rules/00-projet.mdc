@@ -1,0 +1,8 @@
+---
+description: Contexte Swapp et non-négociables, toujours actifs
+alwaysApply: true
+---
+- Lis `AGENTS.md` avant toute action. Produit : `docs/00-vision.md`. Design : `docs/design/DESIGN.md`.
+- Non-négociables : consentement d'abord ; discrétion par défaut ; vérifié ou muet ; aucune nudité nulle part (lingerie max) ; on note le comportement, jamais le physique ; aucun faux profil ; UI optimiste ; calme (3 types de push, plafond 5/jour) ; prix honnête ; RGPD art. 9.
+- Ne développe rien de la colonne V2 de `docs/00-vision.md`.
+- Bloqué ? Rends un bloc `QUESTION` au superviseur, ne t'arrête pas pour Justin.

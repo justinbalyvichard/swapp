@@ -1,0 +1,9 @@
+---
+description: Tests et portes de qualité
+globs: ["**/*.test.ts", "**/*.test.tsx", "e2e/**", "supabase/tests/**"]
+alwaysApply: false
+---
+- Processus complet : `docs/05-processus-qualite.md`. Portes G1 à G8 avant toute relecture.
+- Tester le comportement, pas l'implémentation. Un bug corrigé = un test qui l'aurait détecté.
+- Couverture : ≥ 90 % sur `packages/core`, ≥ 70 % sur le code modifié ailleurs.
+- E2E : Playwright (`e2e/web`), Maestro (`e2e/mobile`) ; cas limites réseau coupé, double tap, non vérifié, ville en attente, couple à deux validations.

@@ -1,0 +1,10 @@
+---
+description: Edge Functions Supabase (Deno)
+globs: ["supabase/functions/**"]
+alwaysApply: false
+---
+- Référence : `docs/04-moderation-et-taches-de-fond.md`.
+- Services externes derrière les adaptateurs de `_shared/` ; implémentation `mock` par défaut sans clé.
+- Webhooks : signature vérifiée, idempotence. Réponses d'erreur sans détail interne.
+- Clés uniquement dans les secrets des fonctions. Aucune donnée personnelle dans les logs.
+- Tests Deno pour chaque fonction, y compris pannes et délais des services.

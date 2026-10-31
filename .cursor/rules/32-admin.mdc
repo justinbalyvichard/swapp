@@ -1,0 +1,9 @@
+---
+description: Console d'administration
+globs: ["apps/admin/**"]
+alwaysApply: false
+---
+- Toute donnée passe par le serveur ; clé service jamais envoyée au navigateur.
+- Chaque route : session + `aal2` + `app_role`. Déconnexion après 15 min d'inactivité.
+- Chaque consultation et action écrite dans `admin.audit_log` (append-only).
+- Photos privées floutées jusqu'à « Afficher pour modérer », journalisé.

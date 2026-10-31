@@ -1,0 +1,8 @@
+---
+description: Règles Git, toujours actives
+alwaysApply: true
+---
+- Ne jamais créer de branche (`checkout -b`, `switch -c`, `branch <nom>` interdits). Justin crée les branches `phase/N-*`.
+- Vérifier `git branch --show-current` avant de travailler. Mauvaise branche = arrêt et point d'arrêt dans `docs/rapports/ACTIONS-JUSTIN.md`.
+- Interdits : merge, rebase, push --force, toute opération sur `main`.
+- Seul le superviseur commite, après validation du lot : `type(portée): description [ID-LOT]`.

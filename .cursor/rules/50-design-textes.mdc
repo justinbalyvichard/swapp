@@ -1,0 +1,9 @@
+---
+description: Design, marque et textes de l'interface
+globs: ["apps/**/*.tsx", "packages/ui-*/**", "packages/i18n/**"]
+alwaysApply: false
+---
+- `docs/design/DESIGN.md` fait foi : tokens, typo, composants signature, liste « à éviter ».
+- Logo et icônes : `docs/design/marque/` (corail toujours en haut, coupure jamais refermée).
+- Textes : français naturel, tutoiement, ton calme et bienveillant ; vocabulaire descriptif, jamais cru (App Store) ; aucun compteur humiliant ni chiffre décourageant.
+- Notifications : texte neutre par défaut (« Nouveau message »).

@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: ["phase/**", "main"]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qualite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: G1 lint
+        run: pnpm lint
+      - name: G2 types
+        run: pnpm typecheck
+      - name: G3 tests unitaires
+        run: pnpm test -- --coverage
+      - uses: supabase/setup-cli@v1
+        with: { version: latest }
+      - name: G4 base de données
+        run: |
+          supabase start -x studio,imgproxy
+          supabase db reset
+          supabase test db
+          supabase db lint --level error
+      - name: G5 types générés à jour
+        run: pnpm db:types && git diff --exit-code packages/supabase/src/types.ts
+      - name: G6 build
+        run: pnpm build
+      - name: G7 sécurité
+        run: |
+          pnpm audit --prod --audit-level high
+          docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:latest detect --source /repo --no-banner
+      - name: E2E web + G8 accessibilité
+        run: |
+          pnpm exec playwright install --with-deps chromium
+          pnpm e2e:web
+          pnpm e2e:a11y

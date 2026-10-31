@@ -1,0 +1,9 @@
+---
+description: PWA et site vitrine Next.js
+globs: ["apps/web/**", "packages/ui-web/**"]
+alwaysApply: false
+---
+- App Router, Server Components par défaut, Server Actions validées par zod, `@supabase/ssr`.
+- PWA : manifeste et icônes de `docs/design/marque/web/`, Web Push VAPID.
+- Site vitrine : aucun traceur, aucun contenu suggestif, aucune photo de membre.
+- Budget < 200 Ko JS gzip sur Découvrir ; axe sans violation sérieuse ; `data-testid` stables.

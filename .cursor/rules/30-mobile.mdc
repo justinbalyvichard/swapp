@@ -1,0 +1,11 @@
+---
+description: Appli iOS Expo
+globs: ["apps/mobile/**", "packages/ui-native/**"]
+alwaysApply: false
+---
+- expo-router, 4 onglets (Découvrir, Soirées, Messages, Profil), une action principale par écran.
+- Design : `docs/design/DESIGN.md`, tokens `packages/ui-tokens`, aucune valeur en dur.
+- TanStack Query, mises à jour optimistes avec rollback ; aucun écran de chargement plein écran.
+- Session dans `expo-secure-store`, verrou PIN / Face ID, vignette neutre en arrière-plan.
+- Photos : compression WebP 1600 px, EXIF retiré avant envoi.
+- Accessibilité : `accessibilityLabel`, taille de texte dynamique, cibles ≥ 44 pt ; `testID` sur chaque élément interactif.

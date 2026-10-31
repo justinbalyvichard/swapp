@@ -1,0 +1,11 @@
+---
+description: Conventions TypeScript du monorepo
+globs: ["**/*.ts", "**/*.tsx"]
+alwaysApply: false
+---
+- `strict: true`, pas de `any` sans commentaire justifié, pas de `as` pour masquer une erreur de type.
+- Validation zod à chaque frontière (entrées RPC, Edge Functions, formulaires, variables d'environnement).
+- Logique métier pure dans `packages/core`, sans dépendance à React ni Supabase, testée avec Vitest.
+- Accès aux données uniquement via `packages/supabase` (clients et RPC typés à partir des types générés).
+- Textes affichés dans `packages/i18n`, jamais en dur dans les composants.
+- Erreurs : jamais avalées ; message utilisateur clair en français, détail technique vers Sentry sans données personnelles.

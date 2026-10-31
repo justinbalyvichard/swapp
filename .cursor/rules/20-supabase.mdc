@@ -1,0 +1,12 @@
+---
+description: Base de données, RLS et RPC Supabase
+globs: ["supabase/**"]
+alwaysApply: false
+---
+- Référence : `docs/02-base-de-donnees.md`. Toute divergence = `QUESTION` au superviseur.
+- Nouvelle migration pour chaque changement ; ne jamais modifier une migration commitée.
+- RLS sur toutes les tables, refus par défaut ; tables de base limitées au contenu de l'utilisateur.
+- Lecture d'autrui uniquement par RPC `SECURITY DEFINER` avec `SET search_path = ''`, noms qualifiés, 7 contrôles du principe central.
+- Jamais en sortie : position exacte, « non » de la grille, notes détaillées, trace de consultation.
+- Chaque RPC et politique a ses tests pgTAP ; la matrice de visibilité est complétée.
+- Après changement : `supabase db reset`, `supabase test db`, `supabase db lint`, `pnpm db:types`.
